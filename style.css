@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --clr1: hsl(246, 80%, 60%);
+  --clr2: hsl(15, 100%, 70%);
+  --clr3: hsl(195, 74%, 62%);
+  --clr4: hsl(348, 100%, 68%);
+  --clr5: hsl(145, 58%, 55%);
+  --clr6: hsl(264, 64%, 52%);
+  --clr7: hsl(43, 84%, 65%);
+  --clr8: hsl(226, 43%, 10%);
+  --clr9: hsl(235, 46%, 20%);
+  --clr10: hsl(235, 45%, 61%);
+  --clr11: hsl(236, 100%, 87%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  font-size: 18px;
+  background-color: var(--clr8);
+  color: white;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.grid-container {
+  width: 1100px;
+  height: 500px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-item {
+  background-color: var(--clr9);
+  border-radius: 15px;
+  overflow: hidden;
+  min-height: 240px;
+}
+
+/* First box */
+
+.grid-item:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: var(--clr9);
+}
+
+.user {
+  height: 67%;
+  background-color: var(--clr1);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 30px;
+}
+
+.user img {
+  width: 85px;
+  border: 4px solid white;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.user p {
+  color: var(--clr11);
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.user h1 {
+  font-weight: 300;
+  font-size: 40px;
+}
+
+.status {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+
+.status p {
+  color: var(--clr11);
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.status p:hover {
+  color: white;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 18%;
+  overflow: hidden;
+}
+
+.background img {
+  position: absolute;
+  right: 20px;
+  top: -6px;
+}
+
+.grid-item:nth-child(2) .background {
+  background-color: var(--clr2);
+}
+
+.grid-item:nth-child(2) {
+  background-color: var(--clr2);
+}
+
+.grid-item:nth-child(3) .background {
+  background-color: var(--clr3);
+}
+
+.grid-item:nth-child(3) {
+  background-color: var(--clr3);
+}
+
+.grid-item:nth-child(4) .background {
+  background-color: var(--clr4);
+}
+
+.grid-item:nth-child(4) {
+  background-color: var(--clr4);
+}
+
+.grid-item:nth-child(5) .background {
+  background-color: var(--clr5);
+}
+
+.grid-item:nth-child(5) {
+  background-color: var(--clr5);
+}
+
+.grid-item:nth-child(6) .background {
+  background-color: var(--clr6);
+}
+
+.grid-item:nth-child(6) {
+  background-color: var(--clr6);
+}
+
+.grid-item:nth-child(7) .background {
+  background-color: var(--clr7);
+}
+
+.grid-item:nth-child(7) {
+  background-color: var(--clr7);
+}
+
+.box {
+  width: 100%;
+  height: 82%;
+  background-color: var(--clr9);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 30px;
+  transition: 0.2s;
+  z-index: 2;
+}
+
+.box:hover {
+  background-color: hsl(235, 42%, 33%);
+  cursor: pointer;
+}
+
+.box-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-title h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.box-title img:hover {
+  cursor: pointer;
+}
+
+.box h3 {
+  font-size: 60px;
+  font-weight: 300;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.box p {
+  color: var(--clr11);
+  font-size: 17px;
+}
+
+/* Mobile design below */
+
+@media only screen and (max-width: 1000px) {
+  main {
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .grid-container {
+    width: 300px;
+    min-width: 300px;
+    height: auto;
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+
+  .grid-item {
+    min-height: 140px;
+  }
+
+  .user {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .user img {
+    width: 70px;
+    margin-bottom: 0px;
+    margin-left: -20px;
+  }
+
+  .user p {
+    position: absolute;
+    margin-bottom: 30px;
+    margin-left: -25px;
+    font-size: 15px;
+  }
+
+  .user h1 {
+    font-size: 23px;
+    margin-top: 20px;
+  }
+
+  .status {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+
+  .status p {
+    font-size: 15px;
+  }
+
+  /* Background below */
+
+  .background {
+    height: 25%;
+  }
+
+  .box {
+    height: 75%;
+    padding: 20px;
+    position: relative;
+  }
+
+  .box-title h2 {
+    font-size: 17px;
+  }
+
+  .box h3 {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .box p {
+    position: absolute;
+    font-size: 15px;
+    right: 20px;
+    bottom: 28px;
+  }
+}
+
+/* JS Classes */
+
+.active {
+  color: white;
+}
